@@ -151,8 +151,7 @@ auto gradient(const Variable<T>& y, Eigen::DenseBase<X>& x)
 template<typename Y, typename X>
 auto jacbian(const Eigen::DenseBase<Y>& y, Eigen::DenseBase<X>& x)
 {
-    // Return the gradient vector of variable y with respect to variables x.
-    // using U = VariableValueType<T>;
+
     using ScalarX = typename X::Scalar;
     static_assert(isVariable<ScalarX>, "Argument x is not a vector with Variable<T> objects..");
 
